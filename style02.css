@@ -1,0 +1,247 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #581c87; 
+    --primary-light: #f3e8ff; 
+    --accent-color: #a855f7;  
+    --text-main: #334155;     
+    --text-muted: #64748b;    
+    --bg-light: #faf5ff;
+    --card-shadow: 0 4px 20px rgba(88, 28, 135, 0.05); 
+    --transition-fast: all 0.3s ease;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-main);
+    line-height: 1.7;
+}
+
+/* HEADER */
+.header {
+    background: linear-gradient(135deg, var(--primary-color), #3b0764);
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+    border-radius: 0 0 30px 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.header h1 {
+    font-size: 42px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    margin-bottom: 8px;
+}
+
+.header h2 {
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--primary-light);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Menu de Navegação */
+.nav-menu ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-top: 25px;
+}
+
+.nav-menu li {
+    margin: 0 10px;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 8px 20px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: var(--transition-fast);
+}
+
+.nav-menu a:hover {
+    background-color: white;
+    color: var(--primary-color);
+}
+
+.nav-menu b
+
+/* MAIN CONTENT */
+.main-content {
+    max-width: 800px;
+    margin: -40px auto 60px auto; 
+    padding: 0 20px;
+}
+
+/* Seção de Fotos */
+.fotos-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.foto-card {
+    background: white;
+    padding: 12px;
+    border-radius: 20px;
+    box-shadow: var(--card-shadow);
+    transition: var(--transition-fast);
+}
+
+.foto-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(88, 28, 135, 0.12);
+}
+
+.foto-card img {
+    display: block;
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* Container do Conteúdo */
+.about {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.about-card {
+    background-color: white;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: var(--card-shadow);
+}
+
+.section-title {
+    margin-bottom: 20px;
+}
+
+.badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--accent-color);
+    background-color: var(--primary-light);
+    padding: 4px 12px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+}
+
+.about h3 {
+    font-size: 22px;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.about p {
+    font-size: 15px;
+    color: var(--text-main);
+    text-align: justify;
+}
+
+/* Lista de Informações Pessoais */
+.info-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.info-list li {
+    background-color: var(--bg-light);
+    padding: 15px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.info-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.info-value {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+/* FOOTER */
+.footer {
+    background-color: #0f172a; /* Azul quase preto, super chique */
+    color: #94a3b8;
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 14px;
+    border-radius: 30px 30px 0 0;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 600px) {
+    .header {
+        padding: 40px 15px;
+    }
+
+    .header h1 {
+        font-size: 32px;
+    }
+
+    .fotos-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .foto-card img {
+        width: 100%;
+        max-width: 260px;
+        height: 260px;
+    }
+
+    .about-card {
+        padding: 25px;
+    }
+
+    .info-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+.interesses img {
+   width: 250px;
+   border-radius: 12px;
+   cursor: pointer;
+   transition: transform 0.3s;
+}
+
+.iinteresses img hover {
+    transform: scale(1.05)
+
+}
